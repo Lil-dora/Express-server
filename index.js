@@ -1,6 +1,7 @@
 const express = require('express')
 const app = express()
-const port = 5000 || process.env.PORT
+const hostname = "0.0.0.0";
+const port = 5000 || process.env.PORT;
 const cors = require('cors')
 
 app.use(cors())
@@ -14,7 +15,7 @@ app.get('/',(req,res)=>{
     }
 })
 
-app.listen(port,()=>{
+app.listen(port, hostname,()=>{
     console.log(`Server Started at port ${port}`);
 })
 
